@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - name: Checkout code
@@ -20,6 +20,13 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
+
+    - name: Set Chrome Driver
+      run: |
+        choco install googlechrome
+        curl -LO https://chromedriver.storage.googleapis.com/$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_win32.zip
+        unzip chromedriver_win32.zip
+        move chromedriver.exe C:\chromedriver
 
     - name: Install dependencies
       run: |
