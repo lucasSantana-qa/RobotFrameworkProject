@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.2 on win32)" generated="2025-02-06T17:31:49.322800" rpa="false" schemaversion="5">
+<suite id="s1" name="RobotFrameworkProject" source="C:\QA\Projetos_Robot\RobotFrameworkProject">
+<suite id="s1-s1" name="Tests" source="C:\QA\Projetos_Robot\RobotFrameworkProject\tests">
+<suite id="s1-s1-s1" name="Test" source="C:\QA\Projetos_Robot\RobotFrameworkProject\tests\Test.robot">
+<test id="s1-s1-s1-t1" name="Abrir site e realizar uma compra" line="19">
+<kw name="Open Browser Remotely" owner="Utils" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-06T17:31:49.513053" level="INFO">Opening browser 'chrome' to base url 'http://www.automationpractice.pl/index.php'.</msg>
+<arg>${REMOTE_URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-06T17:31:49.512716" elapsed="8.179686"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-06T17:31:57.692662" elapsed="0.023079"/>
+</kw>
+<status status="PASS" start="2025-02-06T17:31:49.512062" elapsed="8.203862"/>
+</kw>
+<kw name="Dado que estou no site My Shop">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-06T17:31:57.737412" level="INFO">Element '//div[@id='slider_row']' is displayed.</msg>
+<arg>${sliderRow}</arg>
+<arg>${time}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-06T17:31:57.716943" elapsed="0.020870"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-06T17:31:57.747355" level="INFO">Page title is 'My Shop'.</msg>
+<arg>${titleHomePage}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-02-06T17:31:57.738354" elapsed="0.009271"/>
+</kw>
+<status status="PASS" start="2025-02-06T17:31:57.716398" elapsed="0.031359"/>
+</kw>
+<kw name="E realizo login">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-06T17:31:57.763258" level="INFO">Element '//a[@class='login']' is displayed.</msg>
+<arg>${loginButton}</arg>
+<arg>${time}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-06T17:31:57.748375" elapsed="0.015149"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-02-06T17:31:57.764012" level="INFO">Clicking link '//a[@class='login']'.</msg>
+<arg>${loginButton}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-06T17:31:57.763688" elapsed="1.355196"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-06T17:31:59.123613" level="INFO">Page title is 'Login - My Shop'.</msg>
+<arg>${titleLoginPage}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-02-06T17:31:59.119093" elapsed="0.004784"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-06T17:31:59.124603" level="INFO">Typing text '' into text field '//input[@id='email']'.</msg>
+<arg>${emailInput}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-06T17:31:59.124095" elapsed="0.055676"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-02-06T17:31:59.180329" level="INFO">Typing password into text field '//input[@id='passwd']'.</msg>
+<msg time="2025-02-06T17:31:59.203053" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${PasswdInput}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-06T17:31:59.179966" elapsed="0.060362"/>
+</kw>
+<status status="PASS" start="2025-02-06T17:31:57.748035" elapsed="1.492437"/>
+</kw>
+<kw name="Quit browser" owner="Utils" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-02-06T17:31:59.241690" elapsed="2.138299"/>
+</kw>
+<status status="PASS" start="2025-02-06T17:31:59.240980" elapsed="2.139161"/>
+</kw>
+<status status="PASS" start="2025-02-06T17:31:49.511274" elapsed="11.869011"/>
+</test>
+<status status="PASS" start="2025-02-06T17:31:49.342797" elapsed="12.038270"/>
+</suite>
+<status status="PASS" start="2025-02-06T17:31:49.341093" elapsed="12.040799"/>
+</suite>
+<status status="PASS" start="2025-02-06T17:31:49.325815" elapsed="12.056878"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="RobotFrameworkProject" id="s1" pass="1" fail="0" skip="0">RobotFrameworkProject</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">RobotFrameworkProject.Tests</stat>
+<stat name="Test" id="s1-s1-s1" pass="1" fail="0" skip="0">RobotFrameworkProject.Tests.Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
