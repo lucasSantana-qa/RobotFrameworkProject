@@ -34,6 +34,7 @@ Quando acesso a aba Dresses
 Então adiciono produto no carrinho
     Clicar checkbox
     Selecionar Produto
+    Adicionar produto disponível
     
 #E realizo o checkout do carrinho
     
