@@ -23,12 +23,12 @@ jobs:
       with:
         python-version: '3.x'
 
-    - name: Set Chrome Driver
-      run: |
-        choco install googlechrome
-        curl -LO https://chromedriver.storage.googleapis.com/$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_win32.zip
-        unzip chromedriver_win32.zip
-        move chromedriver.exe C:\chromedriver
+    # - name: Set Chrome Driver
+    #   run: |
+    #     choco install googlechrome
+    #     curl -LO https://chromedriver.storage.googleapis.com/$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_win32.zip
+    #     unzip chromedriver_win32.zip
+    #     move chromedriver.exe C:\chromedriver
 
     - name: Install dependencies
       run: |
