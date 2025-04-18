@@ -9,7 +9,7 @@ ${PasswdInput}    //input[@id='passwd']
 ${password}    12345
 ${email}    automatedTest@qa.com
 ${submitLogin}    //button[@id='SubmitLogin']
-${loginUserNameButton}    //a[@class='account']/span    
+${loginUserNameButton}    //span[text()='Qa Test']    
 ${titleMyAccountPage}    My account - My Shop
 
 *** Keywords ***
@@ -23,5 +23,6 @@ Fazer Login
     Click Button    ${submitLogin}
 
 Validar Nome de Usuario no Botao Login
+    Wait Until Element Is Visible    ${loginUserNameButton}
     Element Text Should Be    ${loginUserNameButton}   Qa Test
     Title Should Be    ${titleMyAccountPage}

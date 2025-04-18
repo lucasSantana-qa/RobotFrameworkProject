@@ -5,7 +5,7 @@ Resource    ../utils/Utils.robot
 *** Variables ***
 ${buttonDresses}    (//a[@title='Dresses'])[2]
 ${titleDressesPage}    Dresses - My Shop
-${checkboxInStock}    //input[@id='layered_quantity_1']
+${checkboxInStock}    layered_quantity_1
 ${product1}    (//ul[@class='product_list grid row']/li)[1]
 ${buttonMore}    (//ul[@class='product_list grid row']/li)[1]//a[@class='button lnk_view btn btn-default']
 ${selectSize}    //select[@id='group_1']
@@ -22,7 +22,7 @@ Validar Titulo Dresses Page
     Validar Titulo da Pagina    ${titleDressesPage}    
 
 Clicar checkbox
-    Wait Until Element Is Visible    ${checkboxInStock}
+    Wait Until Element Is Enabled    ${checkboxInStock}
     Select Checkbox    ${checkboxInStock}
     Sleep    1
     Validar Titulo da Pagina    Dresses > Availability In stock - My Shop
