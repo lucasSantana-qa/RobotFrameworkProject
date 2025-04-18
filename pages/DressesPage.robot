@@ -15,12 +15,14 @@ ${addToCart}    //span[contains(.,'Add to cart')]
 
 *** Keywords ***
 Acessar Aba Dresses
+    Wait Until Element Is Visible    ${buttonDresses}
     Click Link    ${buttonDresses}
 
 Validar Titulo Dresses Page
     Validar Titulo da Pagina    ${titleDressesPage}    
 
 Clicar checkbox
+    Wait Until Element Is Visible    ${checkboxInStock}
     Select Checkbox    ${checkboxInStock}
     Sleep    1
     Validar Titulo da Pagina    Dresses > Availability In stock - My Shop
@@ -33,6 +35,7 @@ Adicionar produto disponível
     Validar Titulo da Pagina    Printed Dress - My Shop
     Select From List By Label    ${selectSize}    M
     Click Element    ${colorPink}
+    Wait Until Element Is Visible    ${addToCart}
     Click Element    ${addToCart}
 
       
