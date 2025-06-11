@@ -9,7 +9,7 @@ ${checkboxInStock}    layered_quantity_1
 ${product1}    (//ul[@class='product_list grid row']/li)[1]
 ${buttonMore}    (//ul[@class='product_list grid row']/li)[1]//a[@class='button lnk_view btn btn-default']
 ${selectSize}    //select[@id='group_1']
-${colorPink}    //a[@name='Pink']
+${colorPink}    color_11
 ${addToCart}    //span[contains(.,'Add to cart')]
 
 
