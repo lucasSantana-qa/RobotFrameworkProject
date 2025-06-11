@@ -32,7 +32,7 @@ Selecionar Produto
     Click Element    ${buttonMore}
 
 Adicionar produto disponível
-    Validar Titulo da Pagina    Printed Dress - My Shop
+    Validar Titulo da Pagina    Printed Summer Dress - My Shop
     Select From List By Label    ${selectSize}    M
     Click Element    ${colorPink}
     Wait Until Element Is Visible    ${addToCart}
